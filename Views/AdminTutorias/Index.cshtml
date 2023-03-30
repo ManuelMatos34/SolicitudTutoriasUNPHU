@@ -1,0 +1,164 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administrador</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+          integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="site-header ajust-header">
+        <div class="site-identity">
+            <h1 class="other-text-color">UNPHU</h1>
+        </div>
+        <nav class="site-navigation">
+            <div>
+                <a class="btn btn-danger" asp-controller="Login" asp-action="LogOut">Salir</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-table">
+        <div class="ajust-header">
+            <div class="m-1">
+                <h2>Unphu <b class="title-color">Tutorias</b></h2>
+                <p><b>Bienvenido. @User.Identity.Name</b></p>
+            </div>
+            <div class="m-1 time-size">
+                <p><b>Fecha:</b> @TempData["Fecha"]</p>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form class="form-options" asp-controller="AdminTutorias" asp-action="Index">
+                    <label class="m-1" for="filtro">Filtro:</label>
+                    <select class="form-select m-1" id="filtro" name="filtro">
+                        <option selected disabled>Todos</option>
+                        <option value="A">Activo</option>
+                        <option value="I">Inactivo</option>
+                        <option value="Espera">Espera</option>
+                    </select>
+                    <input name="buscar" class="form-control" type="text" id="buscar" placeholder="Buscar..." />
+                    <button title="Buscar" class="btn btn-success m-1" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button title="Refrescar" class="btn btn-success m-1" type="submit">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-success m-1" type="button">
+                    Generar Reporte<i class="bi bi-file-earmark-pdf-fill m-1" title="Reporte General"></i>
+                </button>
+                <button class="btn btn-warning m-1" type="button" data-bs-toggle="modal" data-bs-target="#Modal21">
+                    Ayuda <i class="bi bi-exclamation-circle-fill"></i>
+                </button>
+            </div>
+        </div>
+        <hr />
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Codigo</th>
+                        <th>Asignatura</th>
+                        <th>Estatus</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Tutorias item in ViewBag.Tutorias)
+                    {
+                        <tr>
+                            <td>@item.Estudiante</td>
+                            <td>@item.Codigo</td>
+                            <td>@item.Asignatura</td>
+                            <td>@item.Estatus</td>
+                            <td>
+                                <div class="input-group menu-actions">
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal1" data-id-confirmar="@item.Id">
+                                        <i class="bi bi-check-circle-fill" title="Aceptar Seccion"></i>
+                                    </button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal2" data-id-rechazar="@item.Id">
+                                        <i class="bi bi-x-circle-fill" title="Rechazar Seccion"></i>
+                                    </button>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal3" data-id-estatus="@item.Id">
+                                        <i class="bi bi-plus-slash-minus" title="Cambiar Estatus de Seccion"></i>
+                                    </button>
+                                    <button id="enviarCodigoBtn" onclick="enviarCodigo('@item.Codigo','@item.Id')" class="btn btn-warning">
+                                        Asignar Horario y Profesor
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+
+            <div class="pagination-foot">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer footer">
+        <div class="site-identity">
+            <p class="other-text-color">UNPHU © Todos los derechos reservados 2023</p>
+        </div>
+    </footer>
+
+    @await Html.PartialAsync("~/Views/Partials/Modals.cshtml")
+
+    <script>
+        var confirmarUrl = '@Url.Action("confirmar", "AdminTutorias")';
+        var rechazarUrl = '@Url.Action("rechazar", "AdminTutorias")';
+        var estatusUrl = '@Url.Action("estatus", "AdminTutorias")';
+        var asignarUrl = '@Url.Action("ProfHorario", "AdminTutorias")';
+        var profUrl = '@Url.Action("profesores", "AdminTutorias")';
+    </script>
+
+    <script src="~/js/site.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,270 @@
+﻿
+
+<!-- Asignar horario y profesor Modal -->
+
+<div class="modal fade" id="Modal12" tabindex="-1" aria-labelledby="ModalLabel12" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel12">Solicitar Tutoria</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input name="id-hidden" value="" id="input-hidden-id" hidden />
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Profesores:</label>
+                        <select name="prof" class="form-select" id="profesores-select" required>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label">Horario:</label>
+                        <div class="input-group">
+                            <select name="dia" class="form-select" title="Horario" id="dia-select" required>
+                                <option selected disabled value="">Dia...</option>
+                                <option>Lunes</option>
+                                <option>Martes</option>
+                                <option>Miercoles</option>
+                                <option>Jueves</option>
+                                <option>Viernes</option>
+                                <option>Sabado</option>
+                            </select>
+                            <select name="hora1" class="form-select" title="Horario" id="hora1-select" required>
+                                <option selected disabled value="">Desde...</option>
+                                <option>7:00AM</option>
+                                <option>8:00AM</option>
+                                <option>9:00AM</option>
+                                <option>10:00AM</option>
+                                <option>11:00AM</option>
+                                <option>12:00PM</option>
+                                <option>1:00PM</option>
+                                <option>2:00PM</option>
+                                <option>3:00PM</option>
+                                <option>4:00PM</option>
+                                <option>5:00PM</option>
+                                <option>6:00PM</option>
+                                <option>7:00PM</option>
+                                <option>8:00PM</option>
+                                <option>9:00PM</option>
+                                <option>10:00PM</option>
+                            </select>
+                            <select name="hora2" class="form-select" title="Horario" id="hora2-select" required>
+                                <option selected disabled value="">Hasta...</option>
+                                <option>7:00AM</option>
+                                <option>8:00AM</option>
+                                <option>9:00AM</option>
+                                <option>10:00AM</option>
+                                <option>11:00AM</option>
+                                <option>12:00PM</option>
+                                <option>1:00PM</option>
+                                <option>2:00PM</option>
+                                <option>3:00PM</option>
+                                <option>4:00PM</option>
+                                <option>5:00PM</option>
+                                <option>6:00PM</option>
+                                <option>7:00PM</option>
+                                <option>8:00PM</option>
+                                <option>9:00PM</option>
+                                <option>10:00PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success btn-asignar">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Ayuda Modal admin HTML -->
+
+<div class="modal fade" id="Modal21" tabindex="-1" aria-labelledby="ModalLabel21" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel21">Como funciona esto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/img/Imagen-ayuda-admin-1.png">
+                            <div class="p-3">
+                                <p>
+                                    1: Podras filtrar por tutorias activas o inactivas
+
+                                    2: Tambien podras buscar la tutoria que deseas directamente colocando el nombre de la asignatura,
+                                    luego de esto, para iniciar la busqueda, presionar el boton de buscar, y
+                                    para quitar la busqueda presionar el boton de refrescar.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/Imagen-ayuda-admin-2.png">
+                            <div class="p-3">
+                                <p>
+                                    3: En el boton de solicitar tutoria podras crear una seccion introduciendo los datos
+                                    correspondientes,
+
+                                    4: En el boton de generar reporte, se creara un archivo pdf con
+                                    todas las tutorias solicitadas en ese momento.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/Imagen-ayuda-admin-3.png">
+                            <div class="p-3">
+                                <p>
+                                    5: Este es el menu de acciones donde podras confirmar la tutoria, rechazarla,
+                                    cambiar estatus y ver integrantes, por utimo, asignar horario y profesor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Aceptar tutoria Modal HTML -->
+
+<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel1">Confirmar seccion, estas seguro de esto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                A continuacion se mandara un correo, confirmando la seccion a los integrantes,
+                estas seguro de esto?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <a href="#" type="button" class="btn btn-success btn-confirmar">Continuar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rechazar tutoria Modal HTML -->
+
+<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel2">Rechazar seccion, estas seguro de esto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                A continuacion se mandara un correo, rechazando la seccion a los integrantes,
+                estas seguro de esto?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <a href="#" type="button" class="btn btn-success btn-rechazar">Continuar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cambiar Estatus de tutoria Modal HTML -->
+
+<div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel3">Cambiar estatus de seccion, estas seguro de esto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                A continuacion se cambiara el estatus de la seccion ya sea activo o inactivo,
+                estas seguro de esto?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <a href="#" type="button" class="btn btn-success btn-estatus">Continuar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ayuda Modal Estudents HTML -->
+
+<div class="modal fade" id="Modal10" tabindex="-1" aria-labelledby="ModalLabel10" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel10">Como funciona esto?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/img/Imagen-ayuda-estudiante-1.png" class="d-block w-100" alt="...">
+                            <div class="p-3">
+                                <p>
+                                    1: Aqui podras elegir la asignatura a la que deseas solicitar una tutoria.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/Imagen-ayuda-estudiante-2.png" class="d-block w-100" alt="...">
+                            <div class="p-3">
+                                <p>
+                                    2: En esta parte podras ver toda la informacion sobre tu tutoria solo si esta ha sido aprobada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

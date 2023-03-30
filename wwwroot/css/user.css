@@ -1,0 +1,195 @@
+﻿/* Table styles */
+
+.container-table {
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+    table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+    }
+
+    table tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: .35em;
+    }
+
+    table th,
+    table td {
+        padding: .625em;
+        text-align: center;
+    }
+
+    table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+        table caption {
+            font-size: 1.3em;
+        }
+
+        table thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        table tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+        }
+
+        table td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+        }
+
+            table td::before {
+                /*
+	  * aria-label has no advantage, it won't be read inside a table
+	  content: attr(aria-label);
+	  */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            table td:last-child {
+                border-bottom: 0;
+            }
+}
+
+/* Acciones styles */
+
+.menu-actions {
+    justify-content: center;
+}
+
+/* Reloj styles */
+
+.time-size {
+    font-size: 1.2em;
+}
+
+/* Header styles */
+
+.title-color {
+    color: darkgreen;
+}
+
+.site-header {
+    border-bottom: 1px solid darkgreen;
+    border-bottom-color: darkgreen;
+    padding: 0.1em 1em;
+    background-color: darkgreen;
+    box-shadow: 1px 1px 19px #aaaaaa;
+    display: flex;
+}
+
+.ajust-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-identity h1 p {
+    font-size: 1.5em;
+    margin: 0.6em 0;
+}
+
+.other-text-color {
+    color: white;
+}
+
+.site-navigation ul,
+.site-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation li {
+    margin: 1.4em 1em 1em 1em;
+}
+
+/* Footer styles */
+
+.site-footer {
+    border-top: 1px solid #ccc;
+    border-top-color: darkgreen;
+    padding: 0.1em 1em;
+    display: flex;
+    justify-content: center;
+    background-color: darkgreen;
+    box-shadow: 1px 1px 19px #aaaaaa;
+}
+
+.footer {
+    position: fixed;
+    height: 50px;
+    line-height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Pagination styles */
+
+.pagination-foot {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.pagination > li > a {
+    background-color: white;
+    color: green;
+}
+
+    .pagination > li > a:focus,
+    .pagination > li > a:hover,
+    .pagination > li > span:focus,
+    .pagination > li > span:hover {
+        color: green;
+        background-color: #eee;
+        border-color: green;
+    }
+
+.pagination > .active > a {
+    color: white;
+    background-color: green;
+    border: solid 1px green;
+}
+
+    .pagination > .active > a:hover {
+        background-color: green;
+        border: solid 1px green;
+    }
+
+/* Carousel styles */
