@@ -77,6 +77,35 @@ namespace Tutorias_Unphu.Controllers
             var message = (string)cmd.Parameters["@ERROR"].Value;
             con.Close();
 
+            switch (message)
+            {
+                case "A":
+
+                    TempData["Titulo"] = "Ha ocurrido un error";
+                    TempData["Mensaje"] = "Ya tienes una tutoria en curso con esta asignatura";
+                    TempData["Tipo"] = "error";
+
+                    break;
+
+                case "B":
+
+                    TempData["Titulo"] = "Ha ocurrido un error";
+                    TempData["Mensaje"] = "Ya tienes una tutoria en estado de espera con esta asignatura, " +
+                        "dentro de poco te enviaremos un correo con los detalles";
+                    TempData["Tipo"] = "error";
+
+                    break;
+
+                case "C":
+
+                    TempData["Titulo"] = "Confirmacion";
+                    TempData["Mensaje"] = "La solicitud de tutoria a esta asignatura se ha realizado correctamente, " +
+                        "dentro de poco te enviaremos un correo con los detalles";
+                    TempData["Tipo"] = "success";
+
+                    break;
+            }
+
             return RedirectToAction("Index", "TutoriasUnphu");
 
         }

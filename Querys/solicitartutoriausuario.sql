@@ -7,19 +7,21 @@ begin
 
 declare @codigo varchar(15) = (select codigo_asignatura from asignaturas where nombre_asignatura = @asignatura);
 
-if (select max(id) from tutoria where id_usuario = @matricula and asignatura = @codigo and estatus = 'A') is null
-begin
+if (select max(id) from tutoria where id_usuario = @matricula and asignatura = @codigo and estatus = 'A') IS NOT NULL
+	begin
+		set @ERROR = 'A';
+		print @ERROR
+	end
 
-insert into tutoria (id_usuario, asignatura, id_profesor, horario, estatus) values (@matricula, @codigo,'vacio','vacio','Espera')
-set @ERROR = 'Solicitud realizada correctamente, estas en proceso de espera';
-print @ERROR
-
-end
-
+else if (select max(id) from tutoria where id_usuario = @matricula and asignatura = @codigo and estatus = 'Espera') IS NOT NULL
+	begin
+		set @ERROR = 'B';
+		print @ERROR
+	end
 else
-begin
-set @ERROR = 'Ya has solicitado una tutoria con esta asignatura'
-print @ERROR
-
-end
+	begin
+		insert into tutoria (id_usuario, asignatura, id_profesor, horario, estatus) values (@matricula, @codigo,'vacio','vacio','Espera')
+		set @ERROR = 'C';
+		print @ERROR
+	end
 end

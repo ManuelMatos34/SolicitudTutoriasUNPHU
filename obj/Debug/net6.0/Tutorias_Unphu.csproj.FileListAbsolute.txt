@@ -83,3 +83,12 @@ D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\obj\Debug\net6.0\Tutorias_Unphu
 D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Nancy.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\bin\Debug\net6.0\Rotativa.AspNetCore.dll
+D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu\obj\Debug\net6.0\Tutorias_Unphu.MvcApplicationPartsAssemblyInfo.cs

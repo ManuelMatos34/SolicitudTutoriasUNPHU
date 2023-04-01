@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Leguanjes de Cuarta Generacion\Tutorias_Unphu
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Leguanjes de Cuarta Generacion/Tutorias_Unphu/Views/AdminTutorias/GenerarPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UdXRvcmlhc1xHZW5lcmFyUERGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Leguanjes de Cuarta Generacion/Tutorias_Unphu/Views/AdminTutorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UdXRvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

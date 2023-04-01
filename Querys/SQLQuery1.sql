@@ -9,24 +9,24 @@ BEGIN
 
     IF @status_obtenido = 'Espera'
 	begin
-        set @ERROR = 'No se puede cambiar estado porque la tutoria esta en estado de espera';
+        set @ERROR = 'A';
 		print @ERROR;
 	end
     ELSE IF @status_obtenido = 'A'
 	begin
         UPDATE tutoria SET estatus = 'I' WHERE id = @ID
-		set @ERROR = 'Estado Actualizado Correctamente';
+		set @ERROR = 'B';
 		print @ERROR;
 	end
     ELSE IF @status_obtenido = 'I'
 	begin
         UPDATE tutoria SET estatus = 'A' WHERE id = @ID
-		set @ERROR = 'Estado Actualizado Correctamente';
+		set @ERROR = 'C';
 		print @ERROR;
 	end
 	ELSE IF @status_obtenido = 'R'
 	begin
-		set @ERROR = 'No se puede cambiar estado porque la tutoria ya ha sido rechazada';
+		set @ERROR = 'D';
 		print @ERROR;
 	end
 END

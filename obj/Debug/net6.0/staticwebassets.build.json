@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g5rMgQ/TH/bhiBoY1vTCNh0BK+6ui+S37EAvUTQ0ERo=",
+  "Hash": "wc/l98JQG1OYn3TKJWEH84g+WlCB3TGQMtcRehINLfQ=",
   "Source": "Tutorias_Unphu",
   "BasePath": "_content/Tutorias_Unphu",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\css\\sweetalert2.min.css",
+      "SourceId": "Tutorias_Unphu",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\",
+      "BasePath": "_content/Tutorias_Unphu",
+      "RelativePath": "css/sweetalert2.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\sweetalert2.min.css"
     },
     {
       "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\css\\user.css",
@@ -255,6 +272,23 @@
       "OriginalItemSpec": "wwwroot\\img\\unphu_verde.png"
     },
     {
+      "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\js\\alerts.js",
+      "SourceId": "Tutorias_Unphu",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\",
+      "BasePath": "_content/Tutorias_Unphu",
+      "RelativePath": "js/alerts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\alerts.js"
+    },
+    {
       "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\js\\login.js",
       "SourceId": "Tutorias_Unphu",
       "SourceType": "Discovered",
@@ -287,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\js\\sweetalert2.min.js",
+      "SourceId": "Tutorias_Unphu",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\",
+      "BasePath": "_content/Tutorias_Unphu",
+      "RelativePath": "js/sweetalert2.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sweetalert2.min.js"
     },
     {
       "Identity": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -65,10 +65,18 @@ namespace Tutorias_Unphu.Controllers
                         break;
                 }
 
+                TempData["Titulo"] = "Ha ocurrido un error";
+                TempData["Mensaje"] = "El Administrador aun no te ha asignado un rol";
+                TempData["Tipo"] = "error";
+
                 return RedirectToAction("Index", "Login");
             }
             else
             {
+                TempData["Titulo"] = "Ha ocurrido un error";
+                TempData["Mensaje"] = "Asegurate de que los datos introducidos sean correctos";
+                TempData["Tipo"] = "error";
+
                 return RedirectToAction("Index", "Login");
             }
         }

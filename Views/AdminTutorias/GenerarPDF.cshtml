@@ -1,0 +1,103 @@
+﻿@model List<Tutorias>
+@{
+	Layout = null;
+	var reloj = DateTime.Now.ToString("dd MMMM yyyy");
+}
+
+<DOCTYPE html>
+
+	<table style="width:100%">
+	<tbody>
+		<tr>
+			<td style="width:20%"><img alt="logo-unphu - Master en investigación clínica" src="http://www.ub.edu/mastermrcmaimce/wp-content/uploads/2017/01/logo-unphu.png" /></td>
+			<td style="vertical-align:top; width:60%">
+			<table style="width:704px">
+				<tbody>
+					<tr>
+						<td style="width:692px">
+						<h4 style="margin-left:0px; margin-right:0px; text-align:center"><strong>UNIVERSIDAD PEDRO HENRIQUEZ URE&Ntilde;A</strong></h4>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; width:692px">Email: admisionesunphu@hotmal.com&quot;</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; width:692px">Telefono: 123-456-7890</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td style="width:20%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<table style="width:100%">
+				<tbody>
+					<tr>
+						<td colspan="1" style="width:20%">Administrador:</td>
+						<td colspan="3" style="border-bottom:1px solid black; width:80%">AdmisionesUnphu</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table style="width:100%">
+				<tbody>
+					<tr>
+						<td style="width:20%">Documento:</td>
+						<td style="border-bottom:1px solid black; width:30%">Tutorias Solicitadas</td>
+						<td style="width:10%">Fecha:</td>
+						<td style="border-bottom:1px solid black; width:40%">@reloj</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<table class="tbproductos" style="width:100%">
+				<thead>
+					<tr>
+						<th class="tbth">Estudiante</th>
+						<th class="tbth">Codigo</th>
+						<th class="tbth" style="width:130px">Asignatura</th>
+						<th class="tbth" style="width:130px">Horario</th>
+						<th class="tbth" style="width:130px">Profesor</th>
+						<th class="tbth" style="width:130px">Estatus</th>
+
+					</tr>
+				</thead>
+
+
+				<tbody>
+							@{
+
+								foreach (Tutorias item in Model)
+								{
+								<tr>
+									<td class="td-item"><p class="item">@item.Estudiante</p></td>
+									<td class="td-item"><p class="item">@item.Codigo</p></td>
+									<td class="td-item"><p class="item">@item.Asignatura</p></td>
+									<td class="td-item"><p class="item">@item.Horario</p></td>
+									<td class="td-item"><p class="item">@item.Profesor</p></td>
+									<td class="td-item"><p class="item">@item.Estatus</p></td>
+							   </tr>
+								}
+
+							}
+				</tbody>
+
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+</DOCTYPE>

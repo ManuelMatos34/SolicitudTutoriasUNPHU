@@ -50,4 +50,3 @@ begin
 		end
 end
 
-select * from tutoria
