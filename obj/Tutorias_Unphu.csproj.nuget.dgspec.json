@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj": {}
+    "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj": {}
   },
   "projects": {
-    "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj": {
+    "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
+        "projectUniqueName": "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
         "projectName": "Tutorias_Unphu",
-        "projectPath": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
+        "projectPath": "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
         "packagesPath": "C:\\Users\\CasitaBlanca\\.nuget\\packages\\",
-        "outputPath": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\obj\\",
+        "outputPath": "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VZF0pa4eCX0NRXICnHmclT+XdvHg8RBRmjw/qHaFt3v0QTuwDcbDM3eSkvN3ysqKFjNWspwZt8NcbDrSpI9YRQ==",
+  "dgSpecHash": "V8Wd67CA4nD8JiLN1taQiYPyR1eFryAu7rL1plBLGXZvT/NzoKApSgSXLkr7e1y9YlpKvQm5Sph5n0T3GJzZdA==",
   "success": true,
-  "projectFilePath": "D:\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
+  "projectFilePath": "E:\\Disco Duro Respaldo\\Leguanjes de Cuarta Generacion\\Tutorias_Unphu\\Tutorias_Unphu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CasitaBlanca\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\CasitaBlanca\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

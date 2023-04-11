@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Nancy.Json;
@@ -18,7 +19,7 @@ namespace Tutorias_Unphu.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles = "administrador")]
         public IActionResult Index(string filtro, string buscar)
         {
             TempData["Fecha"] = DateTime.Now.ToString("dddd, dd MMMM yyyy");

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Tutorias_Unphu.Controllers
         {
             _context = context;
         }
+        [Authorize]
         public IActionResult Index()
         {
             TempData["Fecha"] = DateTime.Now.ToString("dddd, dd MMMM yyyy");
